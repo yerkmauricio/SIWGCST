@@ -14,12 +14,12 @@
                 </a>
             @endcan
 
-            @can('tours.cotizacion')
+            
                 <a class="btn btn-primary float-right" href="{{ route('tours.cotizacion') }}">
                     <i class="fas fa-plus"></i>
                     Cotización
                 </a>
-            @endcan
+      
 
 
         </div>

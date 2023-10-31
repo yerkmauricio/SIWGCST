@@ -6,6 +6,7 @@ use App\Http\Requests\StoreTourCotizacionRequest;
 use App\Http\Requests\StoreToursRequest;
 use App\Http\Requests\UpdateToursRequest;
 use App\Models\Alimentos;
+use App\Models\Descuento;
 use App\Models\Destinos;
 use App\Models\Foto_tour;
 use App\Models\Hospedajes;
@@ -86,24 +87,46 @@ class ToursController extends Controller
             $hospedaje_id = Hospedajes::find($request->hospedaje_id);
 
             $costofijo = 13;
-            //calculando costo bariable
 
-            $transporte = (($transporte_id->precio) / $request->personas);
+            //calculando costo bariable
+            if ($transporte_id == null) {
+                $transporte = 0;
+            } else {
+                $transporte = (($transporte_id->precio) / $request->personas);
+            }
+
             $guia = (($request->guia) / $request->personas) * ($request->ndia);
             $gastosextras = ($request->gastosextras);
-            $hospedaje = ($hospedaje_id->precio) * ($request->ndia);
+            if ($hospedaje_id == null) {
+                $hospedaje = 0;
+            } else {
+                $hospedaje = ($hospedaje_id->precio) * ($request->ndia);
+            }
+
             $costovarible = $transporte + $guia + $gastosextras + $hospedaje + ($precioalimento * ($request->ndia));
 
             //calculando costo de venta
             $costoventa = $costovarible + $costofijo;
 
             //calculando precio de venta
-            $precioventa =  $costoventa / (1 - (($request->utilidad) / 100));
+            $precioventa =  ceil($costoventa / (1 - (($request->utilidad) / 100)));
 
             //calculando para un tour privado
-            $tourprivado = ($costofijo + ($request->transporte->precio) + ($request->guia * ($request->ndia)) + $gastosextras +
-                ($hospedaje  * ($request->ndia)) + ($precioalimento * ($request->ndia)))
-                / (1 - (($request->utilidad) / 100));
+            // obteniendo el precio del transporte
+            if ($transporte_id == null) {
+                $transporteprivado = 0;
+            } else {
+                $transporteprivado = $request->transporte->precio;
+            }
+            if ($hospedaje_id == null) {
+                $hospedajeprivado = 0;
+            } else {
+                $hospedajeprivado = $hospedaje  * ($request->ndia);
+            }
+
+            $tourprivado = ceil(($costofijo + $transporteprivado + ($request->guia * ($request->ndia)) + $gastosextras +
+                $hospedajeprivado + ($precioalimento * ($request->ndia)))
+                / (1 - (($request->utilidad) / 100)));
 
             $tour = new tours();
             $tour->precio = $precioventa;
@@ -137,12 +160,22 @@ class ToursController extends Controller
 
     public function show(Tours $tour)
     {
+        $descuento = Descuento::where('tipo', 'israelitas')->first();
+
+        if ($descuento == null) {
+            $israelita = $tour->precio;
+        } else {
+            $descuentoporcentaje = $descuento->porcentaje;
+            $israelita = ceil($tour->precio - ($tour->precio * ($descuentoporcentaje / 100)));
+           
+        }
+
         $nombrefoto = $tour->foto_tour->nombre;
-        
+
         // Obtén todos los registros de la tabla foto_tour con el mismo nombre
         $fotosRelacionadas = Foto_tour::where('nombre', $nombrefoto)->get();
         //dd($fotosRelacionadas);
-        return view('administrador.tours.show', compact('tour', 'fotosRelacionadas'));
+        return view('administrador.tours.show', compact('israelita','tour', 'fotosRelacionadas'));
     }
 
     public function edit(Tours $tour)

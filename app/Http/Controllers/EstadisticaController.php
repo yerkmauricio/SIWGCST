@@ -33,7 +33,7 @@ class EstadisticaController extends Controller
         $empleados = Empleados::all();
         $clientes = Clientes::all();
         $reservas = Reserva::all();
-
+        
         $alimentoIdMasComun = $clientes->groupBy('alimento_id')->map->count()->sortDesc()->keys()->first();
         $alimentoMasComun = Alimentos::find($alimentoIdMasComun)->nombre;
 

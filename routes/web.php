@@ -47,7 +47,7 @@ Route::get('/dashboard','dashboard')->middleware('can:dashboard');
 Route::resource('/usuarios',UserControler::class);
 // Route::resource('/tours',ToursController::class)->middleware('can:tours'); esto es par cuando no hay route resource y no directamente 
 Route::resource('/tours',ToursController::class);
-Route::get('/cotizacion', [ToursController::class, 'cotizacion'])->name('tours.cotizacion');
+Route::get('/cotizacion', [ToursController::class, 'cotizacion'])->name('tours.cotizacion') ;
  
 
 Route::resource('/transportes',TransporteController::class);
@@ -61,7 +61,7 @@ Route::resource('/obs_includes',ObsIncludeController::class)->except(['show']);
 Route::resource('/obs_noincludes',ObsNoincludeController::class)->except(['show']);
 
 Route::resource('/lisalis',LisaliController::class);
-Route::get('/admin', [LisaliController::class, 'admin'])->middleware('can:lisalis.admin')->name('lisalis.admin');
+Route::get('/admin', [LisaliController::class, 'admin'])->name('lisalis.admin');
 
 Route::resource('/foto_tours',FotoTourController::class)->except(['show']);
 Route::resource('/n_jerarquicos',NJerarquicoController::class)->except('show');

@@ -50,13 +50,10 @@
 
             <div class="form-row">
                 <div class="media-body">
-                    @php
-                        $isr = 0;
-                        $niñ = 0;
-                    @endphp
+
                     <h6 class="mt-0"><strong>PRECIO:</strong> Los precios son <b>{{ $tour->precio }}0 bs tour compartido
                             {{ $tour->precioprivado }}0 bs tour privado</b> para israelitas <b>
-                            {{ $tour->precio -($tour->precio * 0.20)  }}.00 bs para israelitas</b></h6>
+                            {{ $israelita }}.00 bs para israelitas</b></h6>
                     <h6 class="mt-0"><strong>DIFICULTAD:</strong> El tour tiene una dificultad
                         <b>{{ $tour->dificultad }}</b> de realizar
                     </h6>
@@ -65,8 +62,8 @@
                     <h6 class="mt-0"><strong>HORA DE FINALIZACION:</strong> El tour termina a las
                         <b>{{ $tour->hfin }}</b>
                     </h6>
-                    <h6 class="mt-0"><strong>INCLUYE:</strong> <b>{{ $tour->obs_include->nombre }}</b></h6>
-                    <h6 class="mt-0"><strong>NO INCLUYE: </strong> <b>{{ $tour->obs_noinclude->nombre }}</b></h6>
+                    <h6 class="mt-0"><strong>INCLUYE:</strong> <b>{!! nl2br($tour->obs_include->descripcion) !!}</b></h6>
+                    <h6 class="mt-0"><strong>NO INCLUYE:</strong> <b>{!! nl2br($tour->obs_noinclude->descripcion) !!}</b></h6>
                     <h6 class="mt-0"><strong>DISTANCIA: </strong>El tour posee una distancia de
                         <b>{{ $tour->destino->distancia }}</b> kilometros
                     </h6>
@@ -164,8 +161,10 @@
                                     <img src="{{ Storage::url($foto->foto) }}" alt="{{ $foto->nombre }}"
                                         class="d-block w-100">
                                     <div class="carousel-caption text-center"> <!-- Agregar la clase "carousel-caption" -->
-                                        <p style="font-size: 24px; color: #00ff00;"> <b>Foto del tour {{ $tour->foto_tour->nombre }}</b></p>
-                                        <p style="font-size: 24px; color: #03ff03;" > <b>FOT-{{ $tour->foto_tour->id }}-ST</b></p>
+                                        <p style="font-size: 24px; color: #00ff00;"> <b>Foto del tour
+                                                {{ $tour->foto_tour->nombre }}</b></p>
+                                        <p style="font-size: 24px; color: #03ff03;">
+                                            <b>FOT-{{ $tour->foto_tour->id }}-ST</b></p>
                                     </div>
                                 </div>
                             @endforeach
@@ -192,7 +191,6 @@
 
 @section('css')
     <style>
-        
         h5 {
             text-transform: uppercase;
             font-weight: bold;

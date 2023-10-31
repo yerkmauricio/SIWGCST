@@ -31,7 +31,7 @@
 
                 {{-- nombre --}}
                 <div class="form-group">
-                    <label for="formGroupExampleInput">Nombre del articulo</label>
+                    <label for="formGroupExampleInput">Nombre del nivel</label>
                     <input type="text" class="form-control" name="nombre" value="{{ old('nombre') }}"
                         placeholder="Ingrese el nombre ">
                     @error('nombre')
@@ -41,7 +41,7 @@
 
                 {{-- descripcion --}}
                 <div class="form-group">
-                    <label for="formGroupExampleInput">Descripcion del articulo</label>
+                    <label for="formGroupExampleInput">Descripcion del nivel</label>
                     <input type="text" class="form-control" name="descripcion" value="{{ old('descripcion') }}"
                         placeholder="Ingrese la descripcion ">
                     @error('descripcion')

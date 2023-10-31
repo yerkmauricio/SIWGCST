@@ -19,18 +19,18 @@ class DatabaseSeeder extends Seeder
         $this->call(AreaSeeder::class);
         $this->call(NJerarquicoSeeder::class);
         $this->call(CargoSeeder::class);
-        $this->call(EmpleadosSeeder::class);
-        $this->call(AlimentosSeeder::class);
-        $this->call(DescuentoSeeder::class);
-        $this->call(DestinosSeeder::class);
-        $this->call(FotoTourSeeder::class);
-        $this->call(HospedajesSeeder::class);
-        $this->call(ProductoSeeder::class);
-        $this->call(LisaliSeeder::class);
-        $this->call(ObsIncludeSeeder::class);
-        $this->call(ObsNoincludeSeeder::class);
-        $this->call(TransporteSeeder::class);
-        $this->call(ToursSeeder::class);
-        $this->call(UserSeeder::class);
+        // $this->call(EmpleadosSeeder::class);
+        // $this->call(AlimentosSeeder::class);
+        // $this->call(DescuentoSeeder::class);
+        // $this->call(DestinosSeeder::class);
+        // $this->call(FotoTourSeeder::class);
+        // $this->call(HospedajesSeeder::class);
+        // $this->call(ProductoSeeder::class);
+        // $this->call(LisaliSeeder::class);
+        // $this->call(ObsIncludeSeeder::class);
+        // $this->call(ObsNoincludeSeeder::class);
+        // $this->call(TransporteSeeder::class);
+        // $this->call(ToursSeeder::class);
+        // $this->call(UserSeeder::class);
     }
 }

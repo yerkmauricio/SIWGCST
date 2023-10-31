@@ -30,9 +30,10 @@ return [
     |
     */
 
-    'use_ico_only' => false,
-    'use_full_favicon' => false,
-    //'favicon' => 'img/logo.png'
+    'use_ico_only' => false, // No limitar a archivos .ico
+    'use_full_favicon' => false, // No limitar a la versión completa del favicon
+    'favicon' => 'img/favicon.png', // Ruta al archivo PNG de tu favicon
+
 
     /*
     |--------------------------------------------------------------------------
@@ -65,7 +66,7 @@ return [
     */
 
     'logo' => '<b>SouthTreks</b>',
-    'logo_img' => 'img/logo.png',//logo de la agencia
+    'logo_img' => 'img/logo.png', //logo de la agencia
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
     'logo_img_xl_class' => 'brand-image-xs',
@@ -133,8 +134,8 @@ return [
     'usermenu_enabled' => true,
     'usermenu_header' => false,
     'usermenu_header_class' => 'bg-primary',
-    'usermenu_image' => true,//usando fot en usuario a)
-    'usermenu_desc' => true,//usando foto en usurario a)
+    'usermenu_image' => true, //usando fot en usuario a)
+    'usermenu_desc' => true, //usando foto en usurario a)
     'usermenu_profile_url' => false,
 
     /*
@@ -312,12 +313,12 @@ return [
             'url'  => 'admin/blog',
             'can'  => 'manage-blog',
         ],
-       
+
         [
-            'text'        => 'Usuarios',      
+            'text'        => 'Usuarios',
             'url'         => 'usuarios',
             'icon'        => 'fas fa-user',
-            'style'        => 'fa-primary-color: #188c1f; --fa-secondary-color: #188c1f',//iconos del usuario
+            'style'        => 'fa-primary-color: #188c1f; --fa-secondary-color: #188c1f', //iconos del usuario
             //'label'       => 4,
             'label_color' => 'success',
             'can' => 'usuarios.index',
@@ -325,11 +326,11 @@ return [
         ],
 
 
-        ['header' => 'ACCESO'],//area de ventanas 
+        ['header' => 'ACCESO'], //area de ventanas 
         [
-            'text'        => 'Calendario',      
+            'text'        => 'Calendario',
             'url'         => 'calendarios',
-            'icon'        => 'fas fa-calendar-check',//iconos del calendario
+            'icon'        => 'fas fa-calendar-check', //iconos del calendario
             'style'       => 'color: #188c1f;',
             //'label'       => 4,
             'label_color' => 'success',
@@ -337,34 +338,34 @@ return [
         ],
 
         [
-            'text'        => 'Reserva',      
+            'text'        => 'Reserva',
             'url'         => 'reservas',
-            'icon'        => 'fas fa-book',//reserva
+            'icon'        => 'fas fa-book', //reserva
             'style'       => 'color: #188c1f;',
             //'label'       => 4,
             'label_color' => 'success',
             'can' => 'reservas.index',
         ],
-        
+
         [
-            'text'        => 'Recibo',      
+            'text'        => 'Recibo',
             'url'         => 'recibos',
-            'icon'        => 'fas fa-wallet',//iconos de Recibo
+            'icon'        => 'fas fa-wallet', //iconos de Recibo
             'style'       => 'color: #188c1f;',
             //'label'       => 4,
             'label_color' => 'success',
             'can' => 'recibos.index',
         ],
 
-       
 
-        
+
+
 
         [
-            'text'        => 'Alimentacion',      
+            'text'        => 'Alimentacion',
             'url'         => 'alimentos',
             'icon'        => 'fas fa-utensils',
-            'style'       => 'fa-primary-color: #188c1f;',//iconos del Alimentacion
+            'style'       => 'fa-primary-color: #188c1f;', //iconos del Alimentacion
             //'label'       => 4,
             'label_color' => 'success',
             'can' => 'alimentos.index',
@@ -378,7 +379,7 @@ return [
             //'label'       => 4,
             'label_color' => 'success',
             'can' => 'productos.index',
-            
+
         ],
 
         [
@@ -392,9 +393,9 @@ return [
         ],
 
         [
-            'text'        => 'Transporte',      
+            'text'        => 'Transporte',
             'url'         => 'transportes',
-            'icon'        => 'fas fa-bus',//iconos del Transporte
+            'icon'        => 'fas fa-bus', //iconos del Transporte
             'style'       => 'color: #188c1f;',
             //'label'       => 4,
             'label_color' => 'success',
@@ -403,9 +404,9 @@ return [
         ],
 
         [
-            'text'        => 'Destino',      
+            'text'        => 'Destino',
             'url'         => 'destinos',
-            'icon'        => 'fas fa-map-signs',//iconos del destino
+            'icon'        => 'fas fa-map-signs', //iconos del destino
             'style'       => 'color: #188c1f;',
             //'label'       => 4,
             'label_color' => 'success',
@@ -414,9 +415,9 @@ return [
         ],
 
         [
-            'text'        => 'Hospedaje',      
+            'text'        => 'Hospedaje',
             'url'         => 'hospedajes',
-            'icon'        => 'fas fa-hotel',//iconos del hospedaje
+            'icon'        => 'fas fa-hotel', //iconos del hospedaje
             'style'       => 'color: #188c1f;',
             //'label'       => 4,
             'label_color' => 'success',
@@ -424,9 +425,9 @@ return [
         ],
 
         [
-            'text'        => 'Incluye',      
+            'text'        => 'Incluye',
             'url'         => 'obs_includes',
-            'icon'        => 'fas fa-plus-square',//iconos del include
+            'icon'        => 'fas fa-plus-square', //iconos del include
             'style'       => 'color: #188c1f;',
             //'label'       => 4,
             'label_color' => 'success',
@@ -434,9 +435,9 @@ return [
         ],
 
         [
-            'text'        => 'No incluye',      
+            'text'        => 'No incluye',
             'url'         => 'obs_noincludes',
-            'icon'        => 'fas fa-minus-square',//iconos del no include
+            'icon'        => 'fas fa-minus-square', //iconos del no include
             'style'       => 'color: #188c1f;',
             //'label'       => 4,
             'label_color' => 'success',
@@ -444,20 +445,20 @@ return [
         ],
 
         [
-            'text'        => 'Fotos del tour',      
+            'text'        => 'Fotos del tour',
             'url'         => 'foto_tours',
-            'icon'        => 'fas fa-images',//iconos del no include
+            'icon'        => 'fas fa-images', //iconos del no include
             'style'       => 'color: #188c1f;',
             //'label'       => 4,
             'label_color' => 'success',
             'can' => 'foto_tours.index',
-        ], 
+        ],
 
         [
-            'text'        => 'Tour',      
+            'text'        => 'Tour',
             'url'         => 'tours',
-            'text'        => 'Tour',      
-            'icon'        => 'fas fa-map-marker-alt',//iconos de Tour
+            'text'        => 'Tour',
+            'icon'        => 'fas fa-map-marker-alt', //iconos de Tour
             'style'       => 'color: #188c1f;',
             //'label'       => 4,
             'label_color' => 'success',
@@ -465,21 +466,21 @@ return [
         ],
 
         [
-            'text'        => 'Cliente',      
+            'text'        => 'Cliente',
             'url'         => 'clientes',
-            'icon'        => 'fas fa-user-circle',//iconos del clientes
+            'icon'        => 'fas fa-user-circle', //iconos del clientes
             'style'       => 'color: #188c1f;',
             //'label'       => 4,
             'label_color' => 'success',
             'can' => 'clientes.index',
         ],
 
-       
+
 
         [
-            'text'        => 'Estadistica',      
+            'text'        => 'Estadistica',
             'url'         => 'estadisticas',
-            'icon'        => 'fas fa-chart-bar',//iconos del Estadistica
+            'icon'        => 'fas fa-chart-bar', //iconos del Estadistica
             'style'       => 'color: #188c1f;',
             //'label'       => 4,
             'label_color' => 'success',
@@ -487,9 +488,9 @@ return [
         ],
 
         [
-            'text'        => 'Nivel jerarquico',      
+            'text'        => 'Nivel jerarquico',
             'url'         => 'n_jerarquicos',
-            'icon'        => 'fas fa-level-up-alt',//iconos del Estadistica
+            'icon'        => 'fas fa-level-up-alt', //iconos del Estadistica
             'style'       => 'color: #188c1f;',
             //'label'       => 4,
             'label_color' => 'success',
@@ -497,9 +498,9 @@ return [
         ],
 
         [
-            'text'        => 'Area',      
+            'text'        => 'Area',
             'url'         => 'areas',
-            'icon'        => 'fas fa-square',//iconos del Estadistica
+            'icon'        => 'fas fa-square', //iconos del Estadistica
             'style'       => 'color: #188c1f;',
             //'label'       => 4,
             'label_color' => 'success',
@@ -507,19 +508,19 @@ return [
         ],
 
         [
-            'text'        => 'Cargo',      
+            'text'        => 'Cargo',
             'url'         => 'cargos',
-            'icon'        => 'far fa-address-card',//iconos del cargo
+            'icon'        => 'far fa-address-card', //iconos del cargo
             'style'       => 'color: #188c1f;',
             //'label'       => 4,
             'label_color' => 'success',
             'can' => 'cargos.index',
         ],
-        
+
         [
-            'text'        => 'Empleado',      
+            'text'        => 'Empleado',
             'url'         => 'empleados',
-            'icon'        => 'fas fa-users',//iconos del Personal
+            'icon'        => 'fas fa-users', //iconos del Personal
             'style'       => 'color: #188c1f;',
             //'label'       => 4,
             'label_color' => 'success',
@@ -527,17 +528,17 @@ return [
         ],
 
         [
-            'text'        => 'Descuento',      
+            'text'        => 'Descuento',
             'url'         => 'descuentos',
-            'icon'        => 'fas fa-tag',//descuento
+            'icon'        => 'fas fa-tag', //descuento
             'style'       => 'color: #188c1f;',
             //'label'       => 4,
             'label_color' => 'success',
             'can' => 'descuentos.index',
         ],
-       
-      
-        
+
+
+
     ],
 
     /*
@@ -574,7 +575,7 @@ return [
     |
     */
 
-    'plugins' => [ 
+    'plugins' => [
         'Datatables' => [
             'active' => false,
             'files' => [
@@ -595,7 +596,7 @@ return [
                 ],
             ],
         ],
-        'Select2' => [//son como buscadores
+        'Select2' => [ //son como buscadores
             'active' => false,
             'files' => [
                 [
@@ -610,7 +611,7 @@ return [
                 ],
             ],
         ],
-        'Chartjs' => [//esto es para graficos
+        'Chartjs' => [ //esto es para graficos
             'active' => false,
             'files' => [
                 [
@@ -620,7 +621,7 @@ return [
                 ],
             ],
         ],
-        'Sweetalert2' => [//son los mensajes
+        'Sweetalert2' => [ //son los mensajes
             'active' => false,
             'files' => [
                 [
