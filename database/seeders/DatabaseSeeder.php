@@ -14,12 +14,12 @@ class DatabaseSeeder extends Seeder
     {
     
         // llamando al metodo seeder de permisos
-        $this->call(RoleSeeder::class);
+        //$this->call(RoleSeeder::class);
 
         $this->call(AreaSeeder::class);
         $this->call(NJerarquicoSeeder::class);
         $this->call(CargoSeeder::class);
-        $this->call(EmpleadosSeeder::class);
+        //$this->call(EmpleadosSeeder::class);
         // $this->call(AlimentosSeeder::class);
         // $this->call(DescuentoSeeder::class);
         // $this->call(DestinosSeeder::class);
