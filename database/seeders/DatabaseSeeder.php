@@ -31,6 +31,6 @@ class DatabaseSeeder extends Seeder
         // $this->call(ObsNoincludeSeeder::class);
         // $this->call(TransporteSeeder::class);
         // $this->call(ToursSeeder::class);
-        $this->call(UserSeeder::class);
+       // $this->call(UserSeeder::class);
     }
 }
