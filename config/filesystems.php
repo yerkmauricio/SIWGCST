@@ -33,8 +33,7 @@ return [
         'local' => [
             'driver' => 'local',
             'root' => storage_path('app/public'), //storage_path('app') esta asi 
-            'url' => env('APP_URL') . '/storage',
-            // 'throw' => false,
+            'throw' => false,
             'visibility' => 'public',
         ],
 
@@ -43,7 +42,7 @@ return [
             'root' => storage_path('app/public'),
             'url' => env('APP_URL') . '/storage',
             'visibility' => 'public',
-            // 'throw' => false,
+            'throw' => false,
         ],
         //adicionando para el railway
         // 'local' => [
