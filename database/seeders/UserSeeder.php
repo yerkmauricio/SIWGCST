@@ -15,13 +15,13 @@ class UserSeeder extends Seeder
     {
         $usuarios = [
             [
-                'name' => 'rudy mauricio', 'email' => 'yerkmauricio@gmail.com', 'password' => 123,
-                'empleado_id' => 6,
+                'name' => 'rudy mauricio', 'email' => 'yerkmauricio@gmail.com', 'password' => 12345678,
+                'empleado_id' => 1,
             ],
-            [
-                'name' => 'daysi llusco', 'email' => 'daysi@gmail.com', 'password' => 123,
-                'empleado_id' => 7,
-            ]
+            // [
+            //     'name' => 'daysi llusco', 'email' => 'daysi@gmail.com', 'password' => 123,
+            //     'empleado_id' => 7,
+            // ]
         ];
         User::insert($usuarios);
     }
