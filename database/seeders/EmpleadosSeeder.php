@@ -62,14 +62,14 @@ class EmpleadosSeeder extends Seeder
                 'foto' => 'ruta_foto8.jpg', 'cargo_id' => 3, 'n_jerarquico_id' => 2,
                 'f_registro' => now(),
             ],
-            // [
-            //     'nombre' => 'daysi', 'apellidopaterno' => 'llusco', 'apellidomaterno' => 'candia',
-            //     'dni' => '8377024', 'est_laboral' => 1, 'domicilio' => 'Av. Bolívar 567',
-            //     'nacionalidad' => 'Boliviana', 'genero' => 1, 'whatsapp' => 888888888,
-            //     'fnacimiento' => '2001-04-21', 'finicio' => '2017-06-25', 'fsuspension' => null,
-            //     'foto' => 'ruta_foto8.jpg', 'cargo_id' => 3, 'n_jerarquico_id' => 2,
-            //     'f_registro' => now(),
-            // ],
+            [
+                'nombre' => 'daysi', 'apellidopaterno' => 'llusco', 'apellidomaterno' => 'candia',
+                'dni' => '8377024', 'est_laboral' => 1, 'domicilio' => 'Av. Bolívar 567',
+                'nacionalidad' => 'Boliviana', 'genero' => 1, 'whatsapp' => 888888888,
+                'fnacimiento' => '2001-04-21', 'finicio' => '2017-06-25', 'fsuspension' => null,
+                'foto' => 'ruta_foto8.jpg', 'cargo_id' => 3, 'n_jerarquico_id' => 2,
+                'f_registro' => now(),
+            ],
             // [
             //     'nombre' => 'Javier', 'apellidopaterno' => 'Rodríguez', 'apellidomaterno' => 'López',
             //     'dni' => '89012345', 'est_laboral' => 1, 'domicilio' => 'Av. Bolívar 567',
