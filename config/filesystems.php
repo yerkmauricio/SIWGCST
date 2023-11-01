@@ -33,7 +33,9 @@ return [
         'local' => [
             'driver' => 'local',
             'root' => storage_path('app/public'), //storage_path('app') esta asi 
-            'throw' => false,
+            'url' => env('APP_URL') . '/storage',
+            // 'throw' => false,
+            'visibility' => 'public',
         ],
 
         'public' => [
@@ -41,15 +43,15 @@ return [
             'root' => storage_path('app/public'),
             'url' => env('APP_URL') . '/storage',
             'visibility' => 'public',
-            'throw' => false,
+            // 'throw' => false,
         ],
         //adicionando para el railway
-        'local' => [
-            'driver' => 'local',
-            'root' => storage_path('app/public'), // Asegúrate de que el directorio raíz sea 'app/public'
-            'url' => env('APP_URL') . '/storage',
-            'visibility' => 'public',
-        ],
+        // 'local' => [
+        //     'driver' => 'local',
+        //     'root' => storage_path('app/public'), // Asegúrate de que el directorio raíz sea 'app/public'
+        //     'url' => env('APP_URL') . '/storage',
+        //     'visibility' => 'public',
+        // ],
 
         's3' => [
             'driver' => 's3',
