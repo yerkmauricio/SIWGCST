@@ -185,7 +185,7 @@
 
                 {{-- descripcion --}}
                 <div class="form-group">
-                    <label for="formGroupExampleInput">Descripcion del producto</label>
+                    <label for="formGroupExampleInput">Observacion:</label>
                     <input type="text" class="form-control" name="descripcion" value="{{ $obs ?? old('descripcion') }}" placeholder="Ingrese la descripcion del producto">
                     @error('descripcion')
                         <span style="color: red;">{{ $message }}</span>

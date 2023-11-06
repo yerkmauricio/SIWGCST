@@ -78,7 +78,7 @@
             </div>
         </div>
         <div style="display: flex;">
-            @if ($tour->trasporte_id != null)
+            @if ($tour->transporte_id != null)
                 <div class="myCard">
                     <div class="innerCard">
                         <div class="frontSide">
